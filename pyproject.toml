@@ -9,6 +9,7 @@ packages = [{include = "pytest_solveme"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.28.2"
+jsonschema = "^4.17.3"
 
 
 [tool.poetry.group.dev.dependencies]
