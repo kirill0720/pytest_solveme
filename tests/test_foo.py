@@ -1,7 +1,7 @@
 import requests
 
 from configuration import SERVICE_URL
-from src.baseclasses.responce import Response
+from src.baseclasses.response import Response
 from src.schemas.post import POST_SCHEMA
 from src.pydantic_schemas.post import Post
 
