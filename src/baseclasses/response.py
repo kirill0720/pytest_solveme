@@ -18,8 +18,14 @@ class Response:
 
     def assert_status_code(self, status_code: int | list):
         if isinstance(status_code, list):
-            assert self.status_code in status_code, GlobalErrorMessages.WRONG_STATUS_CODE.value
+            assert self.status_code in status_code, self  # GlobalErrorMessages.WRONG_STATUS_CODE.value
         else:
-            assert self.status_code == status_code, GlobalErrorMessages.WRONG_STATUS_CODE.value
+            assert self.status_code == status_code, self  # GlobalErrorMessages.WRONG_STATUS_CODE.value
 
         return self
+
+    def __str__(self) -> str:
+        return (f'\n'
+                f'Status code: {self.status_code}\n'
+                f'Requested url: {self.response.url}\n'
+                f'Response body: {self.response_json}')
