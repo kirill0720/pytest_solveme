@@ -2,13 +2,16 @@ from enum import Enum
 
 
 class Genders(Enum):
-    female = 'female'
-    male = 'male'
+    FEMALE = 'female'
+    MALE = 'male'
 
 
 class Statuses(Enum):
-    active = 'active'
-    inactive = 'inactive'
+    ACTIVE = "ACTIVE"
+    BANNED = "BANNED"
+    DELETED = "DELETED"
+    INACTIVE = "INACTIVE"
+    MERGED = "MERGED"
 
 
 class UserError(Enum):
